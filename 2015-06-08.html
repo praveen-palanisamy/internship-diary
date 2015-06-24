@@ -1,0 +1,1405 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>body {
+  width: 45em;
+  border: 1px solid #ddd;
+  outline: 1300px solid #fff;
+  margin: 16px auto;
+}
+
+body .markdown-body
+{
+  padding: 30px;
+}
+
+@font-face {
+  font-family: fontawesome-mini;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+@font-face {
+  font-family: octicons-anchor;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+.markdown-body {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #333333;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body b,
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body sub,
+.markdown-body sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+.markdown-body sup {
+  top: -0.5em;
+}
+.markdown-body sub {
+  bottom: -0.25em;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body .codehilitetable {
+  border: 0;
+  border-spacing: 0;
+}
+
+.markdown-body .codehilitetable tr {
+  border: 0;
+}
+
+.markdown-body .codehilitetable pre,
+.markdown-body .codehilitetable div.codehilite {
+  margin: 0;
+}
+
+.markdown-body .linenos,
+.markdown-body .code,
+.markdown-body .codehilitetable td {
+  border: 0;
+  padding: 0;
+}
+
+.markdown-body td:not(.linenos) .linenodiv {
+  padding: 0 !important;
+}
+
+.markdown-body .code {
+  width: 100%;
+}
+
+.markdown-body .linenos div pre,
+.markdown-body .linenodiv pre,
+.markdown-body .linenodiv {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.markdown-body .code div pre,
+.markdown-body .code div {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.markdown-body * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font: 13px Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.4;
+}
+
+.markdown-body a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:focus,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before,
+.markdown-body hr:after {
+  display: table;
+  content: " ";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body kbd {
+  background-color: #e7e7e7;
+  background-image: -moz-linear-gradient(#fefefe, #e7e7e7);
+  background-image: -webkit-linear-gradient(#fefefe, #e7e7e7);
+  background-image: linear-gradient(#fefefe, #e7e7e7);
+  background-repeat: repeat-x;
+  border-radius: 2px;
+  border: 1px solid #cfcfcf;
+  color: #000;
+  padding: 3px 5px;
+  line-height: 10px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  display: inline-block;
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body .headeranchor-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  padding-right: 6px;
+  padding-left: 30px;
+  margin-left: -30px;
+}
+
+.markdown-body .headeranchor-link:focus {
+  outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.markdown-body h1 .headeranchor,
+.markdown-body h2 .headeranchor,
+.markdown-body h3 .headeranchor,
+.markdown-body h4 .headeranchor,
+.markdown-body h5 .headeranchor,
+.markdown-body h6 .headeranchor {
+  display: none;
+  color: #000;
+  vertical-align: middle;
+}
+
+.markdown-body h1:hover .headeranchor-link,
+.markdown-body h2:hover .headeranchor-link,
+.markdown-body h3:hover .headeranchor-link,
+.markdown-body h4:hover .headeranchor-link,
+.markdown-body h5:hover .headeranchor-link,
+.markdown-body h6:hover .headeranchor-link {
+  height: 1em;
+  padding-left: 8px;
+  margin-left: -30px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .headeranchor-link .headeranchor,
+.markdown-body h2:hover .headeranchor-link .headeranchor,
+.markdown-body h3:hover .headeranchor-link .headeranchor,
+.markdown-body h4:hover .headeranchor-link .headeranchor,
+.markdown-body h5:hover .headeranchor-link .headeranchor,
+.markdown-body h6:hover .headeranchor-link .headeranchor {
+  display: inline-block;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre,
+.markdown-body .admonition {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body code,
+.markdown-body samp {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .codehilite {
+  margin-bottom: 16px;
+}
+
+.markdown-body .codehilite pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .codehilite pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+/* Admonition */
+.markdown-body .admonition {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  position: relative;
+  border-radius: 3px;
+  border: 1px solid #e0e0e0;
+  border-left: 6px solid #333;
+  padding: 10px 10px 10px 30px;
+}
+
+.markdown-body .admonition table {
+  color: #333;
+}
+
+.markdown-body .admonition p {
+  padding: 0;
+}
+
+.markdown-body .admonition-title {
+  font-weight: bold;
+  margin: 0;
+}
+
+.markdown-body .admonition>.admonition-title {
+  color: #333;
+}
+
+.markdown-body .attention>.admonition-title {
+  color: #a6d796;
+}
+
+.markdown-body .caution>.admonition-title {
+  color: #d7a796;
+}
+
+.markdown-body .hint>.admonition-title {
+  color: #96c6d7;
+}
+
+.markdown-body .danger>.admonition-title {
+  color: #c25f77;
+}
+
+.markdown-body .question>.admonition-title {
+  color: #96a6d7;
+}
+
+.markdown-body .note>.admonition-title {
+  color: #d7c896;
+}
+
+.markdown-body .admonition:before,
+.markdown-body .attention:before,
+.markdown-body .caution:before,
+.markdown-body .hint:before,
+.markdown-body .danger:before,
+.markdown-body .question:before,
+.markdown-body .note:before {
+  font: normal normal 16px fontawesome-mini;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1.5;
+  color: #333;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.markdown-body .admonition:before {
+  content: "\f056\00a0";
+  color: 333;
+}
+
+.markdown-body .attention:before {
+  content: "\f058\00a0";
+  color: #a6d796;
+}
+
+.markdown-body .caution:before {
+  content: "\f06a\00a0";
+  color: #d7a796;
+}
+
+.markdown-body .hint:before {
+  content: "\f05a\00a0";
+  color: #96c6d7;
+}
+
+.markdown-body .danger:before {
+  content: "\f057\00a0";
+  color: #c25f77;
+}
+
+.markdown-body .question:before {
+  content: "\f059\00a0";
+  color: #96a6d7;
+}
+
+.markdown-body .note:before {
+  content: "\f040\00a0";
+  color: #d7c896;
+}
+
+.markdown-body .admonition::after {
+  content: normal;
+}
+
+.markdown-body .attention {
+  border-left: 6px solid #a6d796;
+}
+
+.markdown-body .caution {
+  border-left: 6px solid #d7a796;
+}
+
+.markdown-body .hint {
+  border-left: 6px solid #96c6d7;
+}
+
+.markdown-body .danger {
+  border-left: 6px solid #c25f77;
+}
+
+.markdown-body .question {
+  border-left: 6px solid #96a6d7;
+}
+
+.markdown-body .note {
+  border-left: 6px solid #d7c896;
+}
+
+.markdown-body .admonition>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body .admonition>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* progress bar*/
+.markdown-body .progress {
+  display: block;
+  width: 300px;
+  margin: 10px 0;
+  height: 24px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #ededed;
+  position: relative;
+  box-shadow: inset -1px 1px 3px rgba(0, 0, 0, .1);
+}
+
+.markdown-body .progress-label {
+  position: absolute;
+  text-align: center;
+  font-weight: bold;
+  width: 100%; margin: 0;
+  line-height: 24px;
+  color: #333;
+  text-shadow: 1px 1px 0 #fefefe, -1px -1px 0 #fefefe, -1px 1px 0 #fefefe, 1px -1px 0 #fefefe, 0 1px 0 #fefefe, 0 -1px 0 #fefefe, 1px 0 0 #fefefe, -1px 0 0 #fefefe, 1px 1px 2px #000;
+  -webkit-font-smoothing: antialiased !important;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.markdown-body .progress-bar {
+  height: 24px;
+  float: left;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #96c6d7;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 -1px 0 rgba(0, 0, 0, .1);
+  background-size: 30px 30px;
+  background-image: -webkit-linear-gradient(
+    135deg, rgba(255, 255, 255, .4) 27%,
+    transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%,
+    transparent 77%, transparent
+  );
+  background-image: -moz-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -ms-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -o-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+}
+
+.markdown-body .progress-100plus .progress-bar {
+  background-color: #a6d796;
+}
+
+.markdown-body .progress-80plus .progress-bar {
+  background-color: #c6d796;
+}
+
+.markdown-body .progress-60plus .progress-bar {
+  background-color: #d7c896;
+}
+
+.markdown-body .progress-40plus .progress-bar {
+  background-color: #d7a796;
+}
+
+.markdown-body .progress-20plus .progress-bar {
+  background-color: #d796a6;
+}
+
+.markdown-body .progress-0plus .progress-bar {
+  background-color: #c25f77;
+}
+
+.markdown-body .candystripe-animate .progress-bar{
+  -webkit-animation: animate-stripes 3s linear infinite;
+  -moz-animation: animate-stripes 3s linear infinite;
+  animation: animate-stripes 3s linear infinite;
+}
+
+@-webkit-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@-moz-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+.markdown-body .gloss .progress-bar {
+  box-shadow:
+    inset 0 4px 12px rgba(255, 255, 255, .7),
+    inset 0 -12px 0 rgba(0, 0, 0, .05);
+}
+
+/* Multimarkdown Critic Blocks */
+.markdown-body .critic_mark {
+  background: #ff0;
+}
+
+.markdown-body .critic_delete {
+  color: #c82829;
+  text-decoration: line-through;
+}
+
+.markdown-body .critic_insert {
+  color: #718c00 ;
+  text-decoration: underline;
+}
+
+.markdown-body .critic_comment {
+  color: #8e908c;
+  font-style: italic;
+}
+
+.markdown-body .headeranchor {
+  font: normal normal 16px octicons-anchor;
+  line-height: 1;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.headeranchor:before {
+  content: '\f05c';
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 4px 0.25em -20px;
+  vertical-align: middle;
+}
+
+/* Media */
+@media only screen and (min-width: 480px) {
+  .markdown-body {
+    font-size:14px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .markdown-body {
+    font-size:16px;
+  }
+}
+
+@media print {
+  .markdown-body * {
+    background: transparent !important;
+    color: black !important;
+    filter:none !important;
+    -ms-filter: none !important;
+  }
+
+  .markdown-body {
+    font-size:12pt;
+    max-width:100%;
+    outline:none;
+    border: 0;
+  }
+
+  .markdown-body a,
+  .markdown-body a:visited {
+    text-decoration: underline;
+  }
+
+  .markdown-body .headeranchor-link {
+    display: none;
+  }
+
+  .markdown-body a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  .markdown-body abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  .markdown-body .ir a:after,
+  .markdown-body a[href^="javascript:"]:after,
+  .markdown-body a[href^="#"]:after {
+    content: "";
+  }
+
+  .markdown-body pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  .markdown-body pre,
+  .markdown-body blockquote {
+    border: 1px solid #999;
+    padding-right: 1em;
+    page-break-inside: avoid;
+  }
+
+  .markdown-body .progress,
+  .markdown-body .progress-bar {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .markdown-body .progress {
+    border: 1px solid #ddd;
+  }
+
+  .markdown-body .progress-bar {
+    height: 22px;
+    border-right: 1px solid #ddd;
+  }
+
+  .markdown-body tr,
+  .markdown-body img {
+    page-break-inside: avoid;
+  }
+
+  .markdown-body img {
+    max-width: 100% !important;
+  }
+
+  .markdown-body p,
+  .markdown-body h2,
+  .markdown-body h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  .markdown-body h2,
+  .markdown-body h3 {
+    page-break-after: avoid;
+  }
+}
+</style><title>2015-06-08</title></head><body><article class="markdown-body"><p>2015-06-08</p>
+<h1 id="mon-08-jun-2015-163547"><a name="user-content-mon-08-jun-2015-163547" href="#mon-08-jun-2015-163547" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Mon, 08 Jun 2015 16:35:47</h1>
+<p>so far today....:<br />
+* Spoke with Larry about the current status (showed the GOALS &amp; TASKS DONE):<br />
+<img alt="Tasks done" src="/home/praveen/Copy/dev/bitbucket/praveenofpersia.bitbucket.org/workDiary/rsc/images/Screenshot" title="from 2015-06-08 16:37:47.png" /><br />
+<img alt="Goals" src="/home/praveen/Copy/dev/bitbucket/praveenofpersia.bitbucket.org/workDiary/rsc/images/Screenshot" title="from 2015-06-08 16:38:43.png" /></p>
+<ul>
+<li>Grabbed the caffe stuffs from <a href="https://github.com/zhenglilei/yaleB_recognition">https://github.com/zhenglilei/yaleB_recognition</a></li>
+<li>Trained it. It took just about a min.</li>
+</ul>
+<h1 id="mon-08-jun-2015-164253"><a name="user-content-mon-08-jun-2015-164253" href="#mon-08-jun-2015-164253" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Mon, 08 Jun 2015 16:42:53</h1>
+<h6 id="training"><a name="user-content-training" href="#training" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>#### Training</h6>
+<p><code>caffe train --solver=lenet_solver.prototxt</code></p>
+<p>could have been <code>caffe train --solver=lenet_solver.prototxt -gpu 0</code></p>
+<h6 id="testing"><a name="user-content-testing" href="#testing" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>#### Testing</h6>
+<p>Testing the yaleB_recognition caffe model.<br />
+<pre><code>praveen@praveen-Inspiron-7537:~/Copy/DiscoveryRobotics/deepLearning/workbench/yaleB_recognition$ caffe test -model lenet_train_test.prototxt -weights lenet_iter_50000.caffemodel -gpu 0 -iterations 100
+</code></pre></p>
+<pre><code>I0608 16:46:09.835342 16571 caffe.cpp:147] Use GPU with device ID 0
+I0608 16:46:09.968039 16571 net.cpp:287] The NetState phase (1) differed from the phase (0) specified by a rule in layer yaleB
+I0608 16:46:09.968142 16571 net.cpp:42] Initializing net from parameters: 
+name: &quot;LeNet&quot;
+state {
+  phase: TEST
+}
+layer {
+  name: &quot;yaleB&quot;
+  type: &quot;Data&quot;
+  top: &quot;data&quot;
+  top: &quot;label&quot;
+  include {
+    phase: TEST
+  }
+  data_param {
+    source: &quot;yaleb_test_leveldb&quot;
+    batch_size: 300
+  }
+}
+layer {
+  name: &quot;flat1&quot;
+  type: &quot;Flatten&quot;
+  bottom: &quot;data&quot;
+  top: &quot;flat1&quot;
+}
+layer {
+  name: &quot;ip1&quot;
+  type: &quot;InnerProduct&quot;
+  bottom: &quot;flat1&quot;
+  top: &quot;ip1&quot;
+  param {
+    lr_mult: 1
+  }
+  inner_product_param {
+    num_output: 100
+    bias_term: false
+    weight_filler {
+      type: &quot;xavier&quot;
+    }
+  }
+}
+layer {
+  name: &quot;accuracy&quot;
+  type: &quot;Accuracy&quot;
+  bottom: &quot;ip1&quot;
+  bottom: &quot;label&quot;
+  top: &quot;accuracy&quot;
+  include {
+    phase: TEST
+  }
+}
+layer {
+  name: &quot;loss&quot;
+  type: &quot;SoftmaxWithLoss&quot;
+  bottom: &quot;ip1&quot;
+  bottom: &quot;label&quot;
+  top: &quot;loss&quot;
+}
+I0608 16:46:09.968408 16571 layer_factory.hpp:74] Creating layer yaleB
+I0608 16:46:09.968436 16571 net.cpp:90] Creating Layer yaleB
+I0608 16:46:09.968451 16571 net.cpp:368] yaleB -&gt; data
+I0608 16:46:09.968482 16571 net.cpp:368] yaleB -&gt; label
+I0608 16:46:09.968499 16571 net.cpp:120] Setting up yaleB
+I0608 16:46:09.981803 16571 db.cpp:20] Opened leveldb yaleb_test_leveldb
+I0608 16:46:09.982182 16571 data_layer.cpp:67] output data size: 300,1,1,262
+I0608 16:46:09.982698 16571 net.cpp:127] Top shape: 300 1 1 262 (78600)
+I0608 16:46:09.982843 16571 net.cpp:127] Top shape: 300 (300)
+I0608 16:46:09.982969 16571 layer_factory.hpp:74] Creating layer label_yaleB_1_split
+I0608 16:46:09.983150 16571 net.cpp:90] Creating Layer label_yaleB_1_split
+I0608 16:46:09.983279 16571 net.cpp:410] label_yaleB_1_split &lt;- label
+I0608 16:46:09.983423 16571 net.cpp:368] label_yaleB_1_split -&gt; label_yaleB_1_split_0
+I0608 16:46:09.983567 16571 net.cpp:368] label_yaleB_1_split -&gt; label_yaleB_1_split_1
+I0608 16:46:09.983711 16571 net.cpp:120] Setting up label_yaleB_1_split
+I0608 16:46:09.983763 16571 net.cpp:127] Top shape: 300 (300)
+I0608 16:46:09.983786 16571 net.cpp:127] Top shape: 300 (300)
+I0608 16:46:09.983805 16571 layer_factory.hpp:74] Creating layer flat1
+I0608 16:46:09.983834 16571 net.cpp:90] Creating Layer flat1
+I0608 16:46:09.983853 16571 net.cpp:410] flat1 &lt;- data
+I0608 16:46:09.983878 16571 net.cpp:368] flat1 -&gt; flat1
+I0608 16:46:09.983901 16571 net.cpp:120] Setting up flat1
+I0608 16:46:09.983922 16571 net.cpp:127] Top shape: 300 262 (78600)
+I0608 16:46:09.983934 16571 layer_factory.hpp:74] Creating layer ip1
+I0608 16:46:09.983958 16571 net.cpp:90] Creating Layer ip1
+I0608 16:46:09.983974 16571 net.cpp:410] ip1 &lt;- flat1
+I0608 16:46:09.983991 16571 net.cpp:368] ip1 -&gt; ip1
+I0608 16:46:09.984012 16571 net.cpp:120] Setting up ip1
+I0608 16:46:09.985399 16571 net.cpp:127] Top shape: 300 100 (30000)
+I0608 16:46:09.985438 16571 layer_factory.hpp:74] Creating layer ip1_ip1_0_split
+I0608 16:46:09.985458 16571 net.cpp:90] Creating Layer ip1_ip1_0_split
+I0608 16:46:09.985471 16571 net.cpp:410] ip1_ip1_0_split &lt;- ip1
+I0608 16:46:09.985487 16571 net.cpp:368] ip1_ip1_0_split -&gt; ip1_ip1_0_split_0
+I0608 16:46:09.985505 16571 net.cpp:368] ip1_ip1_0_split -&gt; ip1_ip1_0_split_1
+I0608 16:46:09.985522 16571 net.cpp:120] Setting up ip1_ip1_0_split
+I0608 16:46:09.985539 16571 net.cpp:127] Top shape: 300 100 (30000)
+I0608 16:46:09.985553 16571 net.cpp:127] Top shape: 300 100 (30000)
+I0608 16:46:09.985564 16571 layer_factory.hpp:74] Creating layer accuracy
+I0608 16:46:09.985585 16571 net.cpp:90] Creating Layer accuracy
+I0608 16:46:09.985597 16571 net.cpp:410] accuracy &lt;- ip1_ip1_0_split_0
+I0608 16:46:09.985611 16571 net.cpp:410] accuracy &lt;- label_yaleB_1_split_0
+I0608 16:46:09.985627 16571 net.cpp:368] accuracy -&gt; accuracy
+I0608 16:46:09.985646 16571 net.cpp:120] Setting up accuracy
+I0608 16:46:09.985667 16571 net.cpp:127] Top shape: (1)
+I0608 16:46:09.985679 16571 layer_factory.hpp:74] Creating layer loss
+I0608 16:46:09.985698 16571 net.cpp:90] Creating Layer loss
+I0608 16:46:09.985710 16571 net.cpp:410] loss &lt;- ip1_ip1_0_split_1
+I0608 16:46:09.985723 16571 net.cpp:410] loss &lt;- label_yaleB_1_split_1
+I0608 16:46:09.985777 16571 net.cpp:368] loss -&gt; loss
+I0608 16:46:09.985800 16571 net.cpp:120] Setting up loss
+I0608 16:46:09.985819 16571 layer_factory.hpp:74] Creating layer loss
+I0608 16:46:09.985967 16571 net.cpp:127] Top shape: (1)
+I0608 16:46:09.985985 16571 net.cpp:129]     with loss weight 1
+I0608 16:46:09.986026 16571 net.cpp:192] loss needs backward computation.
+I0608 16:46:09.986040 16571 net.cpp:194] accuracy does not need backward computation.
+I0608 16:46:09.986054 16571 net.cpp:192] ip1_ip1_0_split needs backward computation.
+I0608 16:46:09.986068 16571 net.cpp:192] ip1 needs backward computation.
+I0608 16:46:09.986079 16571 net.cpp:194] flat1 does not need backward computation.
+I0608 16:46:09.986093 16571 net.cpp:194] label_yaleB_1_split does not need backward computation.
+I0608 16:46:09.986106 16571 net.cpp:194] yaleB does not need backward computation.
+I0608 16:46:09.986117 16571 net.cpp:235] This network produces output accuracy
+I0608 16:46:09.986130 16571 net.cpp:235] This network produces output loss
+I0608 16:46:09.986155 16571 net.cpp:482] Collecting Learning Rate and Weight Decay.
+I0608 16:46:09.986172 16571 net.cpp:247] Network initialization done.
+I0608 16:46:09.986183 16571 net.cpp:248] Memory required for data: 992408
+I0608 16:46:09.986769 16571 caffe.cpp:157] Running for 100 iterations.
+I0608 16:46:10.065186 16571 caffe.cpp:181] Batch 0, accuracy = 0.99
+I0608 16:46:10.065228 16571 caffe.cpp:181] Batch 0, loss = 0.664091
+I0608 16:46:10.067217 16571 caffe.cpp:181] Batch 1, accuracy = 0.986667
+I0608 16:46:10.067237 16571 caffe.cpp:181] Batch 1, loss = 0.779703
+I0608 16:46:10.069246 16571 caffe.cpp:181] Batch 2, accuracy = 0.99
+I0608 16:46:10.069262 16571 caffe.cpp:181] Batch 2, loss = 0.728975
+I0608 16:46:10.071290 16571 caffe.cpp:181] Batch 3, accuracy = 0.98
+I0608 16:46:10.071313 16571 caffe.cpp:181] Batch 3, loss = 0.771441
+I0608 16:46:10.073320 16571 caffe.cpp:181] Batch 4, accuracy = 0.956667
+I0608 16:46:10.073333 16571 caffe.cpp:181] Batch 4, loss = 0.719948
+I0608 16:46:10.075321 16571 caffe.cpp:181] Batch 5, accuracy = 0.993333
+I0608 16:46:10.075341 16571 caffe.cpp:181] Batch 5, loss = 0.575574
+I0608 16:46:10.078213 16571 caffe.cpp:181] Batch 6, accuracy = 0.993333
+I0608 16:46:10.078253 16571 caffe.cpp:181] Batch 6, loss = 0.826917
+I0608 16:46:10.080759 16571 caffe.cpp:181] Batch 7, accuracy = 0.98
+I0608 16:46:10.080813 16571 caffe.cpp:181] Batch 7, loss = 0.810963
+I0608 16:46:10.082968 16571 caffe.cpp:181] Batch 8, accuracy = 0.986667
+I0608 16:46:10.083000 16571 caffe.cpp:181] Batch 8, loss = 0.646252
+I0608 16:46:10.085050 16571 caffe.cpp:181] Batch 9, accuracy = 0.96
+I0608 16:46:10.085072 16571 caffe.cpp:181] Batch 9, loss = 0.742488
+I0608 16:46:10.087299 16571 caffe.cpp:181] Batch 10, accuracy = 0.993333
+I0608 16:46:10.087321 16571 caffe.cpp:181] Batch 10, loss = 0.648562
+I0608 16:46:10.089565 16571 caffe.cpp:181] Batch 11, accuracy = 0.99
+I0608 16:46:10.089589 16571 caffe.cpp:181] Batch 11, loss = 0.84166
+I0608 16:46:10.092133 16571 caffe.cpp:181] Batch 12, accuracy = 0.98
+I0608 16:46:10.092164 16571 caffe.cpp:181] Batch 12, loss = 0.737473
+I0608 16:46:10.094413 16571 caffe.cpp:181] Batch 13, accuracy = 0.966667
+I0608 16:46:10.094442 16571 caffe.cpp:181] Batch 13, loss = 0.731731
+I0608 16:46:10.097903 16571 caffe.cpp:181] Batch 14, accuracy = 0.983333
+I0608 16:46:10.098069 16571 caffe.cpp:181] Batch 14, loss = 0.648118
+I0608 16:46:10.100770 16571 caffe.cpp:181] Batch 15, accuracy = 0.993333
+I0608 16:46:10.100806 16571 caffe.cpp:181] Batch 15, loss = 0.687164
+I0608 16:46:10.103262 16571 caffe.cpp:181] Batch 16, accuracy = 0.99
+I0608 16:46:10.103284 16571 caffe.cpp:181] Batch 16, loss = 0.842076
+I0608 16:46:10.105530 16571 caffe.cpp:181] Batch 17, accuracy = 0.98
+I0608 16:46:10.105551 16571 caffe.cpp:181] Batch 17, loss = 0.715478
+I0608 16:46:10.107935 16571 caffe.cpp:181] Batch 18, accuracy = 0.96
+I0608 16:46:10.107961 16571 caffe.cpp:181] Batch 18, loss = 0.771718
+I0608 16:46:10.110923 16571 caffe.cpp:181] Batch 19, accuracy = 0.99
+I0608 16:46:10.110982 16571 caffe.cpp:181] Batch 19, loss = 0.621487
+I0608 16:46:10.113736 16571 caffe.cpp:181] Batch 20, accuracy = 0.986667
+I0608 16:46:10.113767 16571 caffe.cpp:181] Batch 20, loss = 0.709574
+I0608 16:46:10.116338 16571 caffe.cpp:181] Batch 21, accuracy = 0.99
+I0608 16:46:10.116405 16571 caffe.cpp:181] Batch 21, loss = 0.826639
+I0608 16:46:10.118794 16571 caffe.cpp:181] Batch 22, accuracy = 0.983333
+I0608 16:46:10.118818 16571 caffe.cpp:181] Batch 22, loss = 0.686587
+I0608 16:46:10.121057 16571 caffe.cpp:181] Batch 23, accuracy = 0.963333
+I0608 16:46:10.121075 16571 caffe.cpp:181] Batch 23, loss = 0.720623
+I0608 16:46:10.123183 16571 caffe.cpp:181] Batch 24, accuracy = 0.986667
+I0608 16:46:10.123206 16571 caffe.cpp:181] Batch 24, loss = 0.659647
+I0608 16:46:10.125627 16571 caffe.cpp:181] Batch 25, accuracy = 0.99
+I0608 16:46:10.125668 16571 caffe.cpp:181] Batch 25, loss = 0.814487
+I0608 16:46:10.127841 16571 caffe.cpp:181] Batch 26, accuracy = 0.986667
+I0608 16:46:10.127861 16571 caffe.cpp:181] Batch 26, loss = 0.730773
+I0608 16:46:10.129981 16571 caffe.cpp:181] Batch 27, accuracy = 0.98
+I0608 16:46:10.130013 16571 caffe.cpp:181] Batch 27, loss = 0.749342
+I0608 16:46:10.132583 16571 caffe.cpp:181] Batch 28, accuracy = 0.96
+I0608 16:46:10.132618 16571 caffe.cpp:181] Batch 28, loss = 0.709319
+I0608 16:46:10.136236 16571 caffe.cpp:181] Batch 29, accuracy = 0.993333
+I0608 16:46:10.136281 16571 caffe.cpp:181] Batch 29, loss = 0.613606
+I0608 16:46:10.138638 16571 caffe.cpp:181] Batch 30, accuracy = 0.993333
+I0608 16:46:10.138675 16571 caffe.cpp:181] Batch 30, loss = 0.848165
+I0608 16:46:10.141307 16571 caffe.cpp:181] Batch 31, accuracy = 0.98
+I0608 16:46:10.141345 16571 caffe.cpp:181] Batch 31, loss = 0.748472
+I0608 16:46:10.144031 16571 caffe.cpp:181] Batch 32, accuracy = 0.98
+I0608 16:46:10.144062 16571 caffe.cpp:181] Batch 32, loss = 0.69563
+I0608 16:46:10.146206 16571 caffe.cpp:181] Batch 33, accuracy = 0.966667
+I0608 16:46:10.146224 16571 caffe.cpp:181] Batch 33, loss = 0.739277
+I0608 16:46:10.148214 16571 caffe.cpp:181] Batch 34, accuracy = 0.993333
+I0608 16:46:10.148239 16571 caffe.cpp:181] Batch 34, loss = 0.659677
+I0608 16:46:10.150285 16571 caffe.cpp:181] Batch 35, accuracy = 0.99
+I0608 16:46:10.150310 16571 caffe.cpp:181] Batch 35, loss = 0.794068
+I0608 16:46:10.152328 16571 caffe.cpp:181] Batch 36, accuracy = 0.98
+I0608 16:46:10.152351 16571 caffe.cpp:181] Batch 36, loss = 0.776657
+I0608 16:46:10.154412 16571 caffe.cpp:181] Batch 37, accuracy = 0.963333
+I0608 16:46:10.154441 16571 caffe.cpp:181] Batch 37, loss = 0.737262
+I0608 16:46:10.156644 16571 caffe.cpp:181] Batch 38, accuracy = 0.986667
+I0608 16:46:10.156676 16571 caffe.cpp:181] Batch 38, loss = 0.626116
+I0608 16:46:10.158967 16571 caffe.cpp:181] Batch 39, accuracy = 0.986667
+I0608 16:46:10.158990 16571 caffe.cpp:181] Batch 39, loss = 0.6919
+I0608 16:46:10.161104 16571 caffe.cpp:181] Batch 40, accuracy = 0.99
+I0608 16:46:10.161134 16571 caffe.cpp:181] Batch 40, loss = 0.874923
+I0608 16:46:10.164363 16571 caffe.cpp:181] Batch 41, accuracy = 0.983333
+I0608 16:46:10.164402 16571 caffe.cpp:181] Batch 41, loss = 0.701419
+I0608 16:46:10.166491 16571 caffe.cpp:181] Batch 42, accuracy = 0.963333
+I0608 16:46:10.166523 16571 caffe.cpp:181] Batch 42, loss = 0.707905
+I0608 16:46:10.168541 16571 caffe.cpp:181] Batch 43, accuracy = 0.99
+I0608 16:46:10.168572 16571 caffe.cpp:181] Batch 43, loss = 0.667179
+I0608 16:46:10.170843 16571 caffe.cpp:181] Batch 44, accuracy = 0.986667
+I0608 16:46:10.170866 16571 caffe.cpp:181] Batch 44, loss = 0.778227
+I0608 16:46:10.173168 16571 caffe.cpp:181] Batch 45, accuracy = 0.99
+I0608 16:46:10.173192 16571 caffe.cpp:181] Batch 45, loss = 0.730019
+I0608 16:46:10.177777 16571 caffe.cpp:181] Batch 46, accuracy = 0.98
+I0608 16:46:10.177819 16571 caffe.cpp:181] Batch 46, loss = 0.776443
+I0608 16:46:10.180438 16571 caffe.cpp:181] Batch 47, accuracy = 0.956667
+I0608 16:46:10.180480 16571 caffe.cpp:181] Batch 47, loss = 0.716503
+I0608 16:46:10.183302 16571 caffe.cpp:181] Batch 48, accuracy = 0.993333
+I0608 16:46:10.183326 16571 caffe.cpp:181] Batch 48, loss = 0.573263
+I0608 16:46:10.185806 16571 caffe.cpp:181] Batch 49, accuracy = 0.993333
+I0608 16:46:10.185830 16571 caffe.cpp:181] Batch 49, loss = 0.83161
+I0608 16:46:10.187867 16571 caffe.cpp:181] Batch 50, accuracy = 0.98
+I0608 16:46:10.187885 16571 caffe.cpp:181] Batch 50, loss = 0.805295
+I0608 16:46:10.190101 16571 caffe.cpp:181] Batch 51, accuracy = 0.986667
+I0608 16:46:10.190122 16571 caffe.cpp:181] Batch 51, loss = 0.642958
+I0608 16:46:10.192354 16571 caffe.cpp:181] Batch 52, accuracy = 0.96
+I0608 16:46:10.192384 16571 caffe.cpp:181] Batch 52, loss = 0.758402
+I0608 16:46:10.194703 16571 caffe.cpp:181] Batch 53, accuracy = 0.993333
+I0608 16:46:10.194736 16571 caffe.cpp:181] Batch 53, loss = 0.633726
+I0608 16:46:10.197137 16571 caffe.cpp:181] Batch 54, accuracy = 0.99
+I0608 16:46:10.197165 16571 caffe.cpp:181] Batch 54, loss = 0.843339
+I0608 16:46:10.199338 16571 caffe.cpp:181] Batch 55, accuracy = 0.98
+I0608 16:46:10.199355 16571 caffe.cpp:181] Batch 55, loss = 0.736222
+I0608 16:46:10.201340 16571 caffe.cpp:181] Batch 56, accuracy = 0.966667
+I0608 16:46:10.201359 16571 caffe.cpp:181] Batch 56, loss = 0.734217
+I0608 16:46:10.203567 16571 caffe.cpp:181] Batch 57, accuracy = 0.983333
+I0608 16:46:10.203584 16571 caffe.cpp:181] Batch 57, loss = 0.658827
+I0608 16:46:10.205595 16571 caffe.cpp:181] Batch 58, accuracy = 0.993333
+I0608 16:46:10.205610 16571 caffe.cpp:181] Batch 58, loss = 0.674718
+I0608 16:46:10.207618 16571 caffe.cpp:181] Batch 59, accuracy = 0.99
+I0608 16:46:10.207631 16571 caffe.cpp:181] Batch 59, loss = 0.86175
+I0608 16:46:10.209661 16571 caffe.cpp:181] Batch 60, accuracy = 0.98
+I0608 16:46:10.209694 16571 caffe.cpp:181] Batch 60, loss = 0.696152
+I0608 16:46:10.211686 16571 caffe.cpp:181] Batch 61, accuracy = 0.96
+I0608 16:46:10.211700 16571 caffe.cpp:181] Batch 61, loss = 0.771946
+I0608 16:46:10.213671 16571 caffe.cpp:181] Batch 62, accuracy = 0.99
+I0608 16:46:10.213687 16571 caffe.cpp:181] Batch 62, loss = 0.623475
+I0608 16:46:10.215672 16571 caffe.cpp:181] Batch 63, accuracy = 0.986667
+I0608 16:46:10.215687 16571 caffe.cpp:181] Batch 63, loss = 0.717209
+I0608 16:46:10.217653 16571 caffe.cpp:181] Batch 64, accuracy = 0.99
+I0608 16:46:10.217669 16571 caffe.cpp:181] Batch 64, loss = 0.814175
+I0608 16:46:10.219949 16571 caffe.cpp:181] Batch 65, accuracy = 0.983333
+I0608 16:46:10.219969 16571 caffe.cpp:181] Batch 65, loss = 0.686363
+I0608 16:46:10.222524 16571 caffe.cpp:181] Batch 66, accuracy = 0.963333
+I0608 16:46:10.223511 16571 caffe.cpp:181] Batch 66, loss = 0.740004
+I0608 16:46:10.225751 16571 caffe.cpp:181] Batch 67, accuracy = 0.986667
+I0608 16:46:10.225793 16571 caffe.cpp:181] Batch 67, loss = 0.642124
+I0608 16:46:10.228126 16571 caffe.cpp:181] Batch 68, accuracy = 0.99
+I0608 16:46:10.228168 16571 caffe.cpp:181] Batch 68, loss = 0.818974
+I0608 16:46:10.230361 16571 caffe.cpp:181] Batch 69, accuracy = 0.98
+I0608 16:46:10.230381 16571 caffe.cpp:181] Batch 69, loss = 0.748875
+I0608 16:46:10.232403 16571 caffe.cpp:181] Batch 70, accuracy = 0.986667
+I0608 16:46:10.232421 16571 caffe.cpp:181] Batch 70, loss = 0.726954
+I0608 16:46:10.234647 16571 caffe.cpp:181] Batch 71, accuracy = 0.96
+I0608 16:46:10.234673 16571 caffe.cpp:181] Batch 71, loss = 0.709111
+I0608 16:46:10.237035 16571 caffe.cpp:181] Batch 72, accuracy = 0.993333
+I0608 16:46:10.237062 16571 caffe.cpp:181] Batch 72, loss = 0.611549
+I0608 16:46:10.239241 16571 caffe.cpp:181] Batch 73, accuracy = 0.993333
+I0608 16:46:10.239269 16571 caffe.cpp:181] Batch 73, loss = 0.867778
+I0608 16:46:10.241276 16571 caffe.cpp:181] Batch 74, accuracy = 0.98
+I0608 16:46:10.241288 16571 caffe.cpp:181] Batch 74, loss = 0.729398
+I0608 16:46:10.243301 16571 caffe.cpp:181] Batch 75, accuracy = 0.98
+I0608 16:46:10.243314 16571 caffe.cpp:181] Batch 75, loss = 0.700589
+I0608 16:46:10.245390 16571 caffe.cpp:181] Batch 76, accuracy = 0.966667
+I0608 16:46:10.245415 16571 caffe.cpp:181] Batch 76, loss = 0.737056
+I0608 16:46:10.247408 16571 caffe.cpp:181] Batch 77, accuracy = 0.993333
+I0608 16:46:10.247422 16571 caffe.cpp:181] Batch 77, loss = 0.66297
+I0608 16:46:10.249415 16571 caffe.cpp:181] Batch 78, accuracy = 0.99
+I0608 16:46:10.249431 16571 caffe.cpp:181] Batch 78, loss = 0.798243
+I0608 16:46:10.251715 16571 caffe.cpp:181] Batch 79, accuracy = 0.98
+I0608 16:46:10.251757 16571 caffe.cpp:181] Batch 79, loss = 0.768987
+I0608 16:46:10.254149 16571 caffe.cpp:181] Batch 80, accuracy = 0.963333
+I0608 16:46:10.254191 16571 caffe.cpp:181] Batch 80, loss = 0.745387
+I0608 16:46:10.256559 16571 caffe.cpp:181] Batch 81, accuracy = 0.986667
+I0608 16:46:10.256593 16571 caffe.cpp:181] Batch 81, loss = 0.615816
+I0608 16:46:10.259001 16571 caffe.cpp:181] Batch 82, accuracy = 0.986667
+I0608 16:46:10.259035 16571 caffe.cpp:181] Batch 82, loss = 0.702234
+I0608 16:46:10.261445 16571 caffe.cpp:181] Batch 83, accuracy = 0.99
+I0608 16:46:10.261474 16571 caffe.cpp:181] Batch 83, loss = 0.869792
+I0608 16:46:10.263885 16571 caffe.cpp:181] Batch 84, accuracy = 0.983333
+I0608 16:46:10.263912 16571 caffe.cpp:181] Batch 84, loss = 0.700735
+I0608 16:46:10.266311 16571 caffe.cpp:181] Batch 85, accuracy = 0.963333
+I0608 16:46:10.266337 16571 caffe.cpp:181] Batch 85, loss = 0.705447
+I0608 16:46:10.268697 16571 caffe.cpp:181] Batch 86, accuracy = 0.99
+I0608 16:46:10.268723 16571 caffe.cpp:181] Batch 86, loss = 0.665687
+I0608 16:46:10.271121 16571 caffe.cpp:181] Batch 87, accuracy = 0.986667
+I0608 16:46:10.271144 16571 caffe.cpp:181] Batch 87, loss = 0.777754
+I0608 16:46:10.273517 16571 caffe.cpp:181] Batch 88, accuracy = 0.99
+I0608 16:46:10.273540 16571 caffe.cpp:181] Batch 88, loss = 0.729075
+I0608 16:46:10.275908 16571 caffe.cpp:181] Batch 89, accuracy = 0.98
+I0608 16:46:10.275931 16571 caffe.cpp:181] Batch 89, loss = 0.783394
+I0608 16:46:10.278313 16571 caffe.cpp:181] Batch 90, accuracy = 0.956667
+I0608 16:46:10.278337 16571 caffe.cpp:181] Batch 90, loss = 0.711688
+I0608 16:46:10.280532 16571 caffe.cpp:181] Batch 91, accuracy = 0.993333
+I0608 16:46:10.280561 16571 caffe.cpp:181] Batch 91, loss = 0.578032
+I0608 16:46:10.283885 16571 caffe.cpp:181] Batch 92, accuracy = 0.993333
+I0608 16:46:10.283922 16571 caffe.cpp:181] Batch 92, loss = 0.84473
+I0608 16:46:10.286284 16571 caffe.cpp:181] Batch 93, accuracy = 0.98
+I0608 16:46:10.286317 16571 caffe.cpp:181] Batch 93, loss = 0.787792
+I0608 16:46:10.288719 16571 caffe.cpp:181] Batch 94, accuracy = 0.983333
+I0608 16:46:10.288749 16571 caffe.cpp:181] Batch 94, loss = 0.654573
+I0608 16:46:10.291173 16571 caffe.cpp:181] Batch 95, accuracy = 0.963333
+I0608 16:46:10.291214 16571 caffe.cpp:181] Batch 95, loss = 0.744049
+I0608 16:46:10.293725 16571 caffe.cpp:181] Batch 96, accuracy = 0.993333
+I0608 16:46:10.293767 16571 caffe.cpp:181] Batch 96, loss = 0.637222
+I0608 16:46:10.296130 16571 caffe.cpp:181] Batch 97, accuracy = 0.99
+I0608 16:46:10.296172 16571 caffe.cpp:181] Batch 97, loss = 0.844841
+I0608 16:46:10.298583 16571 caffe.cpp:181] Batch 98, accuracy = 0.98
+I0608 16:46:10.298614 16571 caffe.cpp:181] Batch 98, loss = 0.73651
+I0608 16:46:10.300825 16571 caffe.cpp:181] Batch 99, accuracy = 0.963333
+I0608 16:46:10.300853 16571 caffe.cpp:181] Batch 99, loss = 0.750174
+I0608 16:46:10.300864 16571 caffe.cpp:186] Loss: 0.729134
+I0608 16:46:10.300884 16571 caffe.cpp:198] accuracy = 0.981833
+I0608 16:46:10.300918 16571 caffe.cpp:198] loss = 0.729134 (* 1 = 0.729134 loss)
+</code></pre>
+
+<h1 id="mon-08-jun-2015-193021"><a name="user-content-mon-08-jun-2015-193021" href="#mon-08-jun-2015-193021" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Mon, 08 Jun 2015 19:30:21</h1>
+<h6 id="converting-traintestprototxt-to-deployprototxt"><a name="user-content-converting-traintestprototxt-to-deployprototxt" href="#converting-traintestprototxt-to-deployprototxt" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>####Converting <strong>train/test.prototxt</strong> to <strong>deploy.prototxt</strong></h6>
+<p>============================</p>
+<pre><code>weight fillers, learning rate-decay-momentum params
+also remove anything that is in the &quot;Train&quot; phase
+</code></pre>
+
+<ol>
+<li>Remove <code>weight_filler:</code>, <code>bias_filler:</code></li>
+<li>Modify the top-most layer and the bottom-most layer</li>
+</ol>
+<h6 id="example"><a name="user-content-example" href="#example" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>#Example</h6>
+<p>DIff view showing the top-most layer. Deploy.prototxt on the left &amp; train_test.prototxt on the right.<br />
+<img alt="Diff top" src="rsc/images/diffTop.png" title="DIff view showing the top-most layer. Deploy.prototxt on the left &amp; train_test.prototxt on the right." /><br />
+DIff view showing the bottom-most layer. Deploy.prototxt on the left &amp; train_test.prototxt on the right.<br />
+<img alt="Diff bottom" src="rsc/images/diffBot.png" title="DIff view showing the bottom-most layer. Deploy.prototxt on the left &amp; train_test.prototxt on the right" /></p>
+<p>=========================================</p>
+<h5 id="few-more-tips"><a name="user-content-few-more-tips" href="#few-more-tips" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Few more tips</h5>
+<p><pre><code>The deploy network will be created for you automatically. Once caffe implements their &quot;all-in-one&quot; nets feature, you will be able to specify which layers to include in the deploy file. Until then, these things are done automatically:
+</code></pre><br />
+<pre><code>The last &lt;b&gt;SoftmaxWithLoss&lt;/b&gt; layer is replaced with a &lt;b&gt;Softmax&lt;/b&gt; layer.
+All other loss layers and accuracy layers are removed.
+
+</code></pre></p>
+<pre><code>---------------------------------------------------------------------------
+IndexError                                Traceback (most recent call last)
+&lt;ipython-input-3-45529beeec53&gt; in &lt;module&gt;()
+----&gt; 1 net=caffe.Classifier('lenet_train_test.prototxt','lenet_iter_50000.caffemodel')
+
+/home/praveen/programs/caffe/python/caffe/classifier.pyc in __init__(self, model_file, pretrained_file, image_dims, mean, input_scale, raw_scale, channel_swap)
+     27 
+     28         # configure pre-processing
+---&gt; 29         in_ = self.inputs[0]
+     30         self.transformer = caffe.io.Transformer(
+     31             {in_: self.blobs[in_].data.shape})
+
+IndexError: list index out of range
+</code></pre>
+
+<p>Means that the network model (prototxt file) being loaded by the classifer is not the one for the deployment. <br />
+<code>net=caffe.Classifier('train_test.prototxt,CAFFEMODEL)</code> should be <code>net=caffe.Classifier('deploy.prototxt,CAFFEMODEL</code>)</p></article></body></html>
